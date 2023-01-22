@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "Youtube Speed Extension",
+    "description": "This extension increases the speed of youtube videos by 0.1 every minute",
+    "version": "1.0",
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "permissions": [
+        "tabs",
+        "https://www.youtube.com/*"
+    ],
+    "content_scripts": [
+        {
+            "js": ["background.js"],
+            "matches": ["https://www.youtube.com/*"],
+            "run_at": "document_end"
+        }
+    ]
+}
